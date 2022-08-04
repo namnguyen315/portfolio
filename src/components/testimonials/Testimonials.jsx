@@ -1,11 +1,12 @@
-import "./testimonials.scss"
-import ShortcutIcon from '@mui/icons-material/Shortcut';
-import { FiTwitter, FiYoutube, FiInstagram } from 'react-icons/fi'
-
-
-
+import "./testimonials.scss";
+import ShortcutIcon from "@mui/icons-material/Shortcut";
+import { FiTwitter, FiYoutube, FiInstagram } from "react-icons/fi";
+import { useContext } from "react";
+import { ThemeContext } from "../../context";
 
 export default function Testimonials() {
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
   const data = [
     {
       id: 1,
@@ -38,15 +39,18 @@ export default function Testimonials() {
       <h1>Testimonials</h1>
       <div className="container">
         {data.map((d) => (
-          <div className={d.feature ? "card feature" : "card"}>
+          <div
+            style={{
+              color: darkMode && "black",
+            }}
+            className={d.feature ? "card feature" : "card"}
+          >
             <div className="top">
               <ShortcutIcon className="icon" />
               <img src={d.img} alt="" />
               {d.social}
             </div>
-            <div className="center">
-              {d.desc}
-            </div>
+            <div className="center">{d.desc}</div>
             <div className="bottom">
               <h3>{d.name}</h3>
               <h4>{d.job}</h4>
@@ -55,5 +59,5 @@ export default function Testimonials() {
         ))}
       </div>
     </div>
-  )
+  );
 }

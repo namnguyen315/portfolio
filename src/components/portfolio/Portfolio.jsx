@@ -1,44 +1,42 @@
 import { useEffect, useState } from "react";
 import PortfolioList from "../portfolioList/PortfolioList";
-import "./portfolio.scss"
+import "./portfolio.scss";
 import {
   featuredPortfolio,
   webPortfolio,
   mobilePortfolio,
   designPortfolio,
-  contentPortfolio
-} from "../../data"
+  contentPortfolio,
+} from "../../data";
 
 export default function Portfolio() {
-
   const [selected, setSelected] = useState("featured");
   const [data, setData] = useState([]);
 
   const list = [
     {
       id: "featured",
-      title: "Featured"
+      title: "Featured",
     },
     {
       id: "web",
-      title: "Web App"
+      title: "Web App",
     },
     {
       id: "moblile",
-      title: "Moblile App"
+      title: "Moblile App",
     },
     {
       id: "design",
-      title: "Design"
+      title: "Design",
     },
     {
       id: "branding",
-      title: "Branding"
+      title: "Branding",
     },
   ];
 
   useEffect(() => {
-
     switch (selected) {
       case "featured":
         setData(featuredPortfolio);
@@ -58,14 +56,13 @@ export default function Portfolio() {
       default:
         setData(featuredPortfolio);
     }
-
-  }, [selected])
+  }, [selected]);
 
   return (
     <div className="portfolio" id="portfolio">
       <h1>Portfolio</h1>
       <ul>
-        {list.map(item => (
+        {list.map((item) => (
           <PortfolioList
             title={item.title}
             active={selected === item.id}
@@ -77,14 +74,11 @@ export default function Portfolio() {
       <div className="container">
         {data.map((d) => (
           <div className="item">
-            <img
-              src={d.img}
-              alt=""
-            />
+            <img src={d.img} alt="" />
             <h3>{d.title}</h3>
           </div>
         ))}
       </div>
     </div>
-  )
+  );
 }

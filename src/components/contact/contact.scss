@@ -1,64 +1,251 @@
 .contact {
-    background-color: white;
-    display: flex;
+  width: 100vw;
+  height: calc(100vh - 100px);
+  background-color: rgb(27, 105, 105);
+  position: absolute;
+
+  .backgroundImg {
+    background-image: url("../../../build/assets/coverbackground.jpg");
+    filter: brightness(50%);
+    opacity: 30%;
+    background-size: cover;
+    background-position: 0% 0%;
+    position: absolute;
+    z-index: 0;
     width: 100%;
+    height: 100%;
+  }
+
+  .containerBgrContact {
+    position: absolute;
+    z-index: 0;
+    background-color: rgb(0, 255, 234);
+    width: 60%;
+    height: 70%;
+    border-radius: 20px;
+    opacity: 0.25;
+    margin: calc(((100vh - 100px) * 30) / 200) calc((100vw * 40) / 200);
+  }
+
+  .containerContact {
+    display: flex;
+    width: 60%;
+    height: 70%;
+    margin: calc(((100vh - 100px) * 30) / 200) calc((100vw * 40) / 200);
 
     .left {
-        flex: 1;
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+      flex: 1;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      margin-left: 100px;
+
+      h1 {
+        transition: all 1s ease;
         overflow: hidden;
+        font-weight: 900;
+        color: white;
+      }
+      .line {
+        width: 90%;
+        height: 8px;
+        background-color: white;
+        margin-bottom: 30px;
+        margin-top: 10px;
+        transition: all 1s ease;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 100%;
+        justify-content: space-between;
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        input {
+          height: 50px;
+          border-radius: 10px;
+          border: none;
+          align-items: center;
+          background-color: white;
+          color: black;
+          padding-left: 10px;
+          transition: all 1s ease;
+
+          &:focus {
+            outline-style: none;
+          }
         }
-    }
+        textarea {
+          border-radius: 20px;
+          padding-top: 10px;
+          padding-left: 10px;
+          height: 100px;
+          background-color: white;
+          color: black;
+          transition: all 1s ease;
 
+          &:focus {
+            outline-style: none;
+          }
+        }
+        button {
+          background-color: rgb(145, 10, 10);
+          border-radius: 20px;
+          border: none;
+          width: 150px;
+          height: 50px;
+          color: aqua;
+          font-weight: 900;
+          font-size: large;
+          cursor: pointer;
+          align-self: center;
+        }
+      }
+    }
     .right {
-        flex: 1;
+      z-index: 2;
+      flex: 1;
+      align-items: center;
+      text-align: left;
+
+      .line {
+        height: 8px;
+        background-color: white;
+        margin-bottom: 30px;
+        margin-top: 10px;
+        transition: all 1s ease;
+
+        &.top {
+          width: 90%;
+          margin-top: 105px;
+        }
+        &.bottom {
+          width: 50%;
+          margin-top: 20px;
+          margin-left: 20%;
+          margin-right: 30%;
+        }
+      }
+      .containerInfor {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+
+        .phone {
+          display: flex;
+          width: 100%;
+          height: 50px;
+          margin-bottom: 20px;
+          align-items: center;
+          color: white;
+
+          .icon {
+            margin-right: 20px;
+            font-size: 40px;
+            transition: all 1s ease;
+
+            &:hover {
+              transform: scale(1.1);
+              color: red;
+            }
+          }
+          a {
+            font-size: 20px;
+            font-weight: 500;
+            text-decoration: none;
+            color: white;
+            transition: all 0.5s ease;
+            &:hover {
+              color: red;
+            }
+          }
+        }
+        .email {
+          display: flex;
+          width: 100%;
+          height: 50px;
+          margin-bottom: 20px;
+          align-items: center;
+          color: white;
+
+          .icon {
+            margin-right: 20px;
+            font-size: 40px;
+            transition: all 1s ease;
+
+            &:hover {
+              transform: scale(1.1);
+              color: red;
+            }
+          }
+          a {
+            font-size: 20px;
+            font-weight: 500;
+            text-decoration: none;
+            color: white;
+            transition: all 0.5s ease;
+            &:hover {
+              color: red;
+            }
+          }
+        }
+        .address {
+          display: flex;
+          width: 100%;
+          height: 50px;
+          margin-bottom: 20px;
+          align-items: center;
+          color: white;
+
+          .icon {
+            margin-right: 20px;
+            font-size: 40px;
+            transition: all 1s ease;
+
+            &:hover {
+              transform: scale(1.1);
+              color: red;
+            }
+          }
+          span {
+            font-size: 20px;
+            font-weight: 500;
+            text-decoration: none;
+            color: white;
+            transition: all 0.5s ease;
+            &:hover {
+              color: red;
+            }
+          }
+        }
+
+        //   .icon {
+        //     font-size: 30px;
+        //     margin-right: 20px;
+        //     padding-top: 20px;
+        //     margin-top: 10px;
+        //   }
+      }
+      .containerBotContact {
         display: flex;
         align-items: center;
-        flex-direction: column;
         justify-content: center;
+        margin-right: 10%;
+        color: white;
 
-        h2 {
-            font-size: 30px;
-            margin-top: 100px;
+        .icon {
+          font-size: 40px;
+          margin: 20px;
+          transition: all 1s ease;
+
+          &:hover {
+            transform: scale(1.5);
+            color: red;
+          }
         }
-
-        form {
-            width: 70%;
-            height: 70%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-
-            input {
-                width: 300px;
-                height: 30px;
-                font-size: 14px;
-            }
-
-            textarea {
-                width: 300px;
-                height: 250px;
-                font-size: 14px;
-            }
-
-            button {
-                background-color: crimson;
-                color: white;
-                width: 150px;
-                height: 30px;
-                border: none;
-                border-radius: 10px;
-                cursor: pointer;
-            }
-
-            span {
-                color: rgb(2, 184, 2);
-            }
-        }
+      }
     }
+  }
 }

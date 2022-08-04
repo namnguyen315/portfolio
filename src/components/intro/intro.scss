@@ -1,81 +1,79 @@
-.intro{
-    background-color: white;
-    display: flex;
+.intro {
+  display: flex;
 
-    .left{
-        flex: 0.45;
-        overflow: hidden;
+  .left {
+    flex: 0.45;
+    overflow: hidden;
 
-        .imgContainer{
-            width: 1000px;
-            height: 1000px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            float: right;
-            overflow: hidden;
+    .imgContainer {
+      width: 1000px;
+      height: 1000px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      float: right;
+      overflow: hidden;
 
-            img{
-                height: 100%;
-            }
-        }
+      img {
+        height: 100%;
+      }
     }
-    .right{
-        flex: 0.55;
-        position: relative;
+  }
+  .right {
+    flex: 0.55;
+    position: relative;
 
-        .wrapper{
-            height: 100%;
-            width: 100%;
-            margin-left: 200px;
-            display: flex;
-            flex-direction: column;
-            padding-left: 50px;
-            justify-content: center;
+    .wrapper {
+      height: 100%;
+      width: 100%;
+      margin-left: 200px;
+      display: flex;
+      flex-direction: column;
+      padding-left: 50px;
+      justify-content: center;
 
-            h2{
-                font-style: 35px;
-            }
-            h1{
-                font-size: 60px;
-                margin: 10px 0;
-            }
-            h3{
-                font-style: 30px;
-                span{
-                    font-size: inherit;
-                    color: crimson;
-                }
-                .ityped-cursor{
-                    animation: blink 1s infinite;
-                }
-                @keyframes blink {
-                    50%{
-                        opacity: 1;
-                    }
-                    100%{
-                        opacity: 0;
-                    }
-                }
-            }
-
+      h2 {
+        font-style: 35px;
+      }
+      h1 {
+        font-size: 60px;
+        margin: 10px 0;
+      }
+      h3 {
+        font-style: 30px;
+        span {
+          font-size: inherit;
+          color: crimson;
         }
-        a{
-            position: absolute;
-            bottom: 10px;
-            left: 45%;
-
-            .arrowDown { 
-                font-size: 100px;
-                color: black;
-                animation: arrowBlink 2s infinite;
-            }
-            @keyframes arrowBlink {
-                50%{
-                    opacity: 0;
-                }
-            }
+        .ityped-cursor {
+          animation: blink 1s infinite;
         }
+        @keyframes blink {
+          50% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      }
     }
+    a {
+      position: absolute;
+      bottom: 10px;
+      left: 45%;
+
+      .arrowDown {
+        font-size: 100px;
+        color: black;
+        animation: arrowBlink 2s infinite;
+      }
+      @keyframes arrowBlink {
+        50% {
+          opacity: 0;
+        }
+      }
+    }
+  }
 }

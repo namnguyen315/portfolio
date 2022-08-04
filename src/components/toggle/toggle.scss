@@ -1,0 +1,27 @@
+@import "../../global.scss";
+
+.toggle {
+  display: flex;
+  width: 70px;
+  height: 35px;
+  position: absolute;
+  top: 25px;
+  right: 100px;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 5;
+  background-color: rgb(135, 158, 189);
+  border-radius: 40px;
+  border: $mainColor 2px solid;
+
+  .fillter {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: aqua;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    transition: all 1s ease;
+  }
+}
