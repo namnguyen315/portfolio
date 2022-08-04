@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.49af59a6.css",
-    "main.js": "./static/js/main.06b41812.js",
+    "main.css": "./static/css/main.062b5f74.css",
+    "main.js": "./static/js/main.bf7a3a39.js",
+    "static/media/1631093399_teamwirk-la-gi.jpg": "./static/media/1631093399_teamwirk-la-gi.15c124c8c88508a07b8a.jpg",
     "index.html": "./index.html",
-    "main.49af59a6.css.map": "./static/css/main.49af59a6.css.map",
-    "main.06b41812.js.map": "./static/js/main.06b41812.js.map"
+    "main.062b5f74.css.map": "./static/css/main.062b5f74.css.map",
+    "main.bf7a3a39.js.map": "./static/js/main.bf7a3a39.js.map"
   },
   "entrypoints": [
-    "static/css/main.49af59a6.css",
-    "static/js/main.06b41812.js"
+    "static/css/main.062b5f74.css",
+    "static/js/main.bf7a3a39.js"
   ]
 }
